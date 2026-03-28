@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Unit Converter — freeunitconvert.app</title>
+<meta name="description" content="Free online unit converter. Convert length, weight, temperature, volume, area, speed, data, and time units instantly in your browser.">
+<meta property="og:title" content="Free Unit Converter — freeunitconvert.app">
+<meta property="og:description" content="Convert length, weight, temperature, volume, area, speed, data, and time units instantly.">
+<meta property="og:image" content="/og-image.svg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://freeunitconvert.app">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="manifest" href="/manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #faf9f6;
+  --surface: #f4f2ee;
+  --border: #e8e4dd;
+  --text: #1a1917;
+  --text-secondary: #6b6860;
+  --text-muted: #9a958c;
+  --accent: #C49A2A;
+  --accent-hover: #b08a24;
+  --header-h: 52px;
+  --status-h: 32px;
+}
+
+[data-theme="dark"] {
+  --bg: #141412;
+  --surface: #1e1c1a;
+  --border: #2e2b27;
+  --text: #f0ede8;
+  --text-secondary: #a8a49c;
+  --text-muted: #706c64;
+  --accent: #D4A835;
+  --accent-hover: #e0b840;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Header */
+.header {
+  height: var(--header-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  flex-shrink: 0;
+}
+
+.header-brand {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.theme-toggle {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-secondary);
+  font-size: 16px;
+  transition: background 0.15s, border-color 0.15s;
+}
+.theme-toggle:hover { border-color: var(--accent); }
+
+/* Main */
+.main {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 32px 16px;
+  overflow-y: auto;
+}
+
+.converter {
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  margin-bottom: 24px;
+  scrollbar-width: none;
+}
+.tabs::-webkit-scrollbar { display: none; }
+
+.tab {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  background: var(--surface);
+  color: var(--text-secondary);
+  transition: background 0.15s, color 0.15s;
+}
+.tab:hover { color: var(--text); }
+.tab.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* Converter rows */
+.converter-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.convert-row {
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+}
+
+.input-wrap {
+  flex: 1;
+  min-width: 0;
+}
+
+.amount-input, .result-display {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.15s;
+}
+.amount-input:focus { border-color: var(--accent); }
+
+.result-display {
+  color: var(--text-secondary);
+  cursor: default;
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 62px;
+  user-select: all;
+}
+
+.result-text {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.copy-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-muted);
+  padding: 4px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  transition: color 0.15s;
+}
+.copy-btn:hover { color: var(--accent); }
+
+.copy-tooltip {
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--text);
+  color: var(--bg);
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s;
+}
+.copy-tooltip.show { opacity: 1; }
+
+.unit-select-wrap {
+  width: 180px;
+  flex-shrink: 0;
+}
+
+.unit-select {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  width: 100%;
+  height: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 12px;
+  color: var(--text);
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%236b6860' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 32px;
+  transition: border-color 0.15s;
+}
+.unit-select:focus { border-color: var(--accent); }
+
+/* Swap button */
+.swap-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 8px 0;
+}
+
+.swap-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  font-size: 18px;
+  transition: border-color 0.15s, color 0.15s;
+}
+.swap-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Formula */
+.formula {
+  margin-top: 20px;
+  font-size: 13px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+/* Reference table */
+.ref-table-wrap {
+  margin-top: 16px;
+  overflow-x: auto;
+}
+
+.ref-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+.ref-table th {
+  background: var(--surface);
+  font-weight: 600;
+  text-align: left;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+}
+.ref-table td {
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+/* Status bar */
+.status-bar {
+  height: var(--status-h);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 20px;
+  font-size: 11px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+/* Badge */
+.badge {
+  position: fixed;
+  bottom: calc(var(--status-h) + 8px);
+  right: 16px;
+  font-size: 11px;
+  color: var(--text-muted);
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.15s;
+}
+.badge:hover { opacity: 1; }
+
+/* Mobile */
+@media (max-width: 520px) {
+  .convert-row {
+    flex-direction: column;
+  }
+  .unit-select-wrap {
+    width: 100%;
+  }
+  .amount-input, .result-display {
+    font-size: 20px;
+    padding: 14px;
+  }
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <a href="/" class="header-brand">freeunitconvert.app</a>
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+    <svg id="themeIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+    </svg>
+  </button>
+</header>
+
+<main class="main">
+  <div class="converter">
+    <div class="tabs" id="tabs"></div>
+    <div class="converter-body">
+      <div class="convert-row">
+        <div class="input-wrap">
+          <input type="text" class="amount-input" id="amountInput" placeholder="0" inputmode="decimal" autocomplete="off">
+        </div>
+        <div class="unit-select-wrap">
+          <select class="unit-select" id="fromUnit"></select>
+        </div>
+      </div>
+      <div class="swap-wrap">
+        <button class="swap-btn" id="swapBtn" aria-label="Swap units">&#8597;</button>
+      </div>
+      <div class="convert-row">
+        <div class="input-wrap">
+          <div class="result-display">
+            <span class="result-text" id="resultText">0</span>
+            <button class="copy-btn" id="copyBtn" aria-label="Copy result">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+              <span class="copy-tooltip" id="copyTooltip">Copied!</span>
+            </button>
+          </div>
+        </div>
+        <div class="unit-select-wrap">
+          <select class="unit-select" id="toUnit"></select>
+        </div>
+      </div>
+    </div>
+    <div class="formula" id="formula"></div>
+    <div class="ref-table-wrap">
+      <table class="ref-table" id="refTable"></table>
+    </div>
+  </div>
+</main>
+
+<div class="status-bar">All processing happens in your browser</div>
+<a href="https://freesuite.app" class="badge" target="_blank" rel="noopener">by freesuite.app</a>
+
+<script>
+const CATEGORIES = {
+  Length: {
+    base: 'Meter',
+    units: {
+      Kilometer: 1000, Meter: 1, Centimeter: 0.01, Millimeter: 0.001,
+      Micrometer: 1e-6, Nanometer: 1e-9, Mile: 1609.344, Yard: 0.9144,
+      Foot: 0.3048, Inch: 0.0254, 'Nautical Mile': 1852
+    }
+  },
+  Weight: {
+    base: 'Kilogram',
+    units: {
+      Kilogram: 1, Gram: 0.001, Milligram: 1e-6, 'Metric Ton': 1000,
+      Pound: 0.45359237, Ounce: 0.028349523125, Stone: 6.35029318,
+      'US Ton': 907.18474, 'Imperial Ton': 1016.0469088
+    }
+  },
+  Temperature: {
+    base: 'Celsius',
+    units: { Celsius: null, Fahrenheit: null, Kelvin: null },
+    convert(val, from, to) {
+      if (from === to) return val;
+      let c;
+      if (from === 'Celsius') c = val;
+      else if (from === 'Fahrenheit') c = (val - 32) * 5 / 9;
+      else c = val - 273.15;
+      if (to === 'Celsius') return c;
+      if (to === 'Fahrenheit') return c * 9 / 5 + 32;
+      return c + 273.15;
+    }
+  },
+  Volume: {
+    base: 'Liter',
+    units: {
+      Liter: 1, Milliliter: 0.001, 'Cubic Meter': 1000,
+      'Gallon (US)': 3.785411784, 'Gallon (UK)': 4.54609,
+      Quart: 0.946352946, Pint: 0.473176473, Cup: 0.2365882365,
+      'Fluid Ounce': 0.0295735295625, Tablespoon: 0.01478676478125,
+      Teaspoon: 0.00492892159375
+    }
+  },
+  Area: {
+    base: 'Square Meter',
+    units: {
+      'Square Meter': 1, 'Square Kilometer': 1e6, 'Square Mile': 2589988.110336,
+      'Square Yard': 0.83612736, 'Square Foot': 0.09290304,
+      'Square Inch': 0.00064516, Hectare: 10000, Acre: 4046.8564224
+    }
+  },
+  Speed: {
+    base: 'm/s',
+    units: {
+      'm/s': 1, 'km/h': 1/3.6, 'mph': 0.44704,
+      Knot: 0.514444, 'ft/s': 0.3048, Mach: 343
+    }
+  },
+  Data: {
+    base: 'Byte',
+    units: {
+      Bit: 0.125, Byte: 1, Kilobyte: 1000, Megabyte: 1e6,
+      Gigabyte: 1e9, Terabyte: 1e12, Petabyte: 1e15,
+      Kibibyte: 1024, Mebibyte: 1048576, Gibibyte: 1073741824,
+      Tebibyte: 1099511627776
+    }
+  },
+  Time: {
+    base: 'Second',
+    units: {
+      Nanosecond: 1e-9, Microsecond: 1e-6, Millisecond: 0.001,
+      Second: 1, Minute: 60, Hour: 3600, Day: 86400,
+      Week: 604800, 'Month (30 days)': 2592000, 'Year (365 days)': 31536000
+    }
+  }
+};
+
+const $ = id => document.getElementById(id);
+const tabsEl = $('tabs');
+const amountInput = $('amountInput');
+const fromUnit = $('fromUnit');
+const toUnit = $('toUnit');
+const resultText = $('resultText');
+const formulaEl = $('formula');
+const refTable = $('refTable');
+
+let currentCategory = 'Length';
+
+// Theme
+function applyTheme(dark) {
+  document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+  $('themeIcon').innerHTML = dark
+    ? '<path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z"/>'
+    : '<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>';
+}
+
+let isDark = localStorage.getItem('suite_theme') === 'dark';
+applyTheme(isDark);
+$('themeToggle').addEventListener('click', () => {
+  isDark = !isDark;
+  localStorage.setItem('suite_theme', isDark ? 'dark' : 'light');
+  applyTheme(isDark);
+});
+
+// Tabs
+function renderTabs() {
+  tabsEl.innerHTML = '';
+  for (const cat of Object.keys(CATEGORIES)) {
+    const btn = document.createElement('button');
+    btn.className = 'tab' + (cat === currentCategory ? ' active' : '');
+    btn.textContent = cat;
+    btn.addEventListener('click', () => selectCategory(cat));
+    tabsEl.appendChild(btn);
+  }
+}
+
+function populateSelects(cat) {
+  const units = Object.keys(CATEGORIES[cat].units);
+  [fromUnit, toUnit].forEach((sel, i) => {
+    sel.innerHTML = '';
+    units.forEach(u => {
+      const opt = document.createElement('option');
+      opt.value = u;
+      opt.textContent = u;
+      sel.appendChild(opt);
+    });
+    sel.value = units[i < units.length ? i : 0];
+  });
+  if (units.length > 1) toUnit.value = units[1];
+}
+
+function selectCategory(cat) {
+  currentCategory = cat;
+  renderTabs();
+  const saved = JSON.parse(localStorage.getItem('uc_state') || '{}');
+  populateSelects(cat);
+  if (saved[cat]) {
+    if (saved[cat].from && fromUnit.querySelector(`option[value="${CSS.escape(saved[cat].from)}"]`)) fromUnit.value = saved[cat].from;
+    if (saved[cat].to && toUnit.querySelector(`option[value="${CSS.escape(saved[cat].to)}"]`)) toUnit.value = saved[cat].to;
+  }
+  convert();
+}
+
+// Conversion
+function formatResult(num) {
+  if (num === 0) return '0';
+  if (!isFinite(num)) return 'Infinity';
+  const abs = Math.abs(num);
+  if (abs >= 1e15 || (abs < 1e-6 && abs > 0)) {
+    return num.toExponential(9).replace(/\.?0+e/, 'e');
+  }
+  return parseFloat(num.toPrecision(10)).toString();
+}
+
+function convertValue(val, from, to, cat) {
+  const c = CATEGORIES[cat];
+  if (c.convert) return c.convert(val, from, to);
+  const baseVal = val * c.units[from];
+  return baseVal / c.units[to];
+}
+
+function convert() {
+  const val = parseFloat(amountInput.value);
+  if (isNaN(val) || amountInput.value.trim() === '') {
+    resultText.textContent = '0';
+    updateFormula();
+    updateRefTable();
+    return;
+  }
+  const result = convertValue(val, fromUnit.value, toUnit.value, currentCategory);
+  resultText.textContent = formatResult(result);
+  updateFormula();
+  updateRefTable();
+  saveState();
+}
+
+function updateFormula() {
+  const from = fromUnit.value;
+  const to = toUnit.value;
+  if (from === to) {
+    formulaEl.textContent = `1 ${from} = 1 ${to}`;
+    return;
+  }
+  const result = convertValue(1, from, to, currentCategory);
+  formulaEl.textContent = `1 ${from} = ${formatResult(result)} ${to}`;
+}
+
+function updateRefTable() {
+  const from = fromUnit.value;
+  const to = toUnit.value;
+  const values = [0.001, 0.01, 0.1, 1, 2, 5, 10, 50, 100, 1000];
+  let html = `<thead><tr><th>${from}</th><th>${to}</th></tr></thead><tbody>`;
+  for (const v of values) {
+    const r = convertValue(v, from, to, currentCategory);
+    html += `<tr><td>${v}</td><td>${formatResult(r)}</td></tr>`;
+  }
+  html += '</tbody>';
+  refTable.innerHTML = html;
+}
+
+function saveState() {
+  const saved = JSON.parse(localStorage.getItem('uc_state') || '{}');
+  saved._cat = currentCategory;
+  saved[currentCategory] = { from: fromUnit.value, to: toUnit.value };
+  localStorage.setItem('uc_state', JSON.stringify(saved));
+}
+
+// Events
+amountInput.addEventListener('input', convert);
+fromUnit.addEventListener('change', () => { convert(); saveState(); });
+toUnit.addEventListener('change', () => { convert(); saveState(); });
+
+$('swapBtn').addEventListener('click', () => {
+  const tmp = fromUnit.value;
+  fromUnit.value = toUnit.value;
+  toUnit.value = tmp;
+  convert();
+  saveState();
+});
+
+$('copyBtn').addEventListener('click', () => {
+  navigator.clipboard.writeText(resultText.textContent).then(() => {
+    const tip = $('copyTooltip');
+    tip.classList.add('show');
+    setTimeout(() => tip.classList.remove('show'), 1200);
+  });
+});
+
+// Init
+const saved = JSON.parse(localStorage.getItem('uc_state') || '{}');
+if (saved._cat && CATEGORIES[saved._cat]) currentCategory = saved._cat;
+renderTabs();
+selectCategory(currentCategory);
+
+// Service worker
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js');
+}
+</script>
+</body>
+</html>
