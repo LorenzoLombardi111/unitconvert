@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Convert Kilograms to Pounds — Free Calculator | freeunitconvert.app</title>
+<meta name="description" content="Convert kg to lbs instantly with our free calculator. No ads, works offline. Accurate kilogram to pound conversions for travel, fitness, and cooking.">
+<link rel="canonical" href="https://freeunitconvert.app/kg-to-lbs.html">
+<meta property="og:title" content="Convert Kilograms to Pounds — Free Calculator">
+<meta property="og:description" content="Convert kg to lbs instantly with our free calculator. No ads, works offline. Accurate kilogram to pound conversions for travel, fitness, and cooking.">
+<meta property="og:url" content="https://freeunitconvert.app/kg-to-lbs.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="freeunitconvert.app">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Convert Kilograms to Pounds — Free Calculator">
+<meta name="twitter:description" content="Convert kg to lbs instantly with our free calculator. No ads, works offline. Accurate kilogram to pound conversions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Convert Kilograms to Pounds — Free Calculator",
+    "description": "Learn how to convert kilograms to pounds with our free online calculator. Includes conversion formula, reference table, and FAQs.",
+    "dateModified": "2026-03-28",
+    "author": {
+      "@type": "Organization",
+      "name": "freeunitconvert.app"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How many pounds are in a kilogram?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "1 kilogram is equal to 2.20462 pounds. This conversion factor is based on the international avoirdupois pound, which is the standard pound used in the United States and other countries that use the imperial system."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the formula for kg to lbs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Multiply the number of kilograms by 2.20462 to get the equivalent in pounds. For example, 10 kg × 2.20462 = 22.0462 lbs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is 1 kg exactly 2.2 pounds?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, 1 kg = 2.20462262185 lbs. 2.2 is an approximation. While 2.2 is commonly used for quick mental math, the more precise value of 2.20462 should be used when accuracy matters."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I convert lbs back to kg?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Divide the number of pounds by 2.20462 to get the equivalent in kilograms, or use our lbs to kg converter for instant results."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does this converter work offline?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, it's a PWA that caches everything after your first visit. You can convert units even without an internet connection."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "freeunitconvert.app",
+    "applicationCategory": "UtilitiesApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://freeunitconvert.app/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Unit Converter",
+        "item": "https://freeunitconvert.app/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Kilograms to Pounds"
+      }
+    ]
+  }
+]
+</script>
+<style>
+  :root {
+    --bg: #faf9f6;
+    --surface: #f4f2ee;
+    --border: #e8e4dd;
+    --text: #1a1917;
+    --text-secondary: #6b6860;
+    --text-muted: #9a958c;
+    --accent: #C49A2A;
+  }
+
+  [data-theme="dark"] {
+    --bg: #141412;
+    --surface: #1e1c1a;
+    --border: #2e2b27;
+    --text: #f0ede8;
+    --text-secondary: #a8a49c;
+    --text-muted: #706c64;
+    --accent: #D4A835;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Lora', serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 24px;
+    position: relative;
+  }
+
+  .theme-toggle {
+    position: absolute;
+    top: 48px;
+    right: 24px;
+    width: 36px;
+    height: 36px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text);
+    transition: background 0.2s;
+  }
+
+  .theme-toggle:hover {
+    background: var(--border);
+  }
+
+  .theme-toggle svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .breadcrumb {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 32px;
+  }
+
+  .breadcrumb a {
+    color: var(--text-muted);
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover {
+    color: var(--accent);
+  }
+
+  .breadcrumb span {
+    margin: 0 6px;
+  }
+
+  .last-updated {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+  }
+
+  h1 {
+    font-family: 'Lora', serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 12px;
+    color: var(--text);
+  }
+
+  h2 {
+    font-family: 'Lora', serif;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-top: 48px;
+    margin-bottom: 16px;
+    color: var(--text);
+  }
+
+  p {
+    margin-bottom: 16px;
+    color: var(--text-secondary);
+  }
+
+  .converter-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 24px;
+    margin: 32px 0;
+  }
+
+  .converter-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .converter-input {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    width: 100%;
+    color: var(--text);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .converter-input:focus {
+    border-color: var(--accent);
+  }
+
+  .converter-result {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    width: 100%;
+    color: var(--text-muted);
+    margin-top: 12px;
+  }
+
+  .converter-formula {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 12px;
+    text-align: center;
+  }
+
+  .ref-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+  }
+
+  .ref-table th {
+    background: var(--surface);
+    text-align: left;
+    padding: 10px 14px;
+    font-weight: 600;
+    color: var(--text);
+    border: 1px solid var(--border);
+  }
+
+  .ref-table td {
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+  }
+
+  .ref-table tr:hover td {
+    background: var(--surface);
+  }
+
+  ul {
+    margin: 0 0 16px 24px;
+    color: var(--text-secondary);
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
+
+  details {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+
+  summary {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    padding: 14px 18px;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  summary::after {
+    content: "+";
+    font-size: 18px;
+    color: var(--text-muted);
+    transition: transform 0.2s;
+  }
+
+  details[open] summary::after {
+    content: "\2212";
+  }
+
+  details p {
+    padding: 0 18px 14px;
+    font-size: 15px;
+    margin-bottom: 0;
+  }
+
+  .cta-button {
+    display: block;
+    max-width: 280px;
+    margin: 40px auto;
+    padding: 14px 28px;
+    background: var(--accent);
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 8px;
+    transition: opacity 0.2s;
+  }
+
+  .cta-button:hover {
+    opacity: 0.9;
+  }
+
+  .related-pages {
+    margin-top: 48px;
+  }
+
+  .related-pages h2 {
+    margin-top: 0;
+  }
+
+  .related-pages ul {
+    list-style: none;
+    margin-left: 0;
+    padding: 0;
+  }
+
+  .related-pages li {
+    margin-bottom: 6px;
+  }
+
+  .related-pages a {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .related-pages a:hover {
+    text-decoration: underline;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 64px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  .badge {
+    position: fixed;
+    bottom: 12px;
+    right: 12px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    color: var(--text-muted);
+    text-decoration: none;
+  }
+
+  .badge:hover {
+    color: var(--accent);
+  }
+
+  code {
+    font-size: 14px;
+    background: var(--surface);
+    padding: 2px 6px;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+  }
+
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 26px;
+    }
+    .container {
+      padding: 32px 16px;
+    }
+    .theme-toggle {
+      top: 32px;
+      right: 16px;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+    <svg id="sunIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+    <svg id="moonIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="display:none;"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+  </button>
+
+  <nav class="breadcrumb">
+    <a href="/">Home</a><span>&gt;</span><a href="/">Unit Converter</a><span>&gt;</span>Kilograms to Pounds
+  </nav>
+
+  <p class="last-updated">Last updated: March 28, 2026</p>
+
+  <h1>Convert Kilograms to Pounds &mdash; Free Calculator</h1>
+
+  <div class="converter-box">
+    <label class="converter-label" for="kgInput">Kilograms (kg)</label>
+    <input class="converter-input" type="number" id="kgInput" placeholder="Enter weight in kg" step="any">
+    <div class="converter-result" id="lbsResult">— lbs</div>
+    <div class="converter-formula">kg &times; 2.20462 = lbs</div>
+  </div>
+
+  <h2>How to Convert Kilograms to Pounds</h2>
+  <p>Converting kilograms to pounds is straightforward once you know the conversion factor. One kilogram is equal to approximately 2.20462 pounds. To convert any weight from kilograms to pounds, simply multiply the kilogram value by 2.20462. This factor is derived from the internationally agreed-upon definition of the pound, where one pound equals exactly 0.45359237 kilograms.</p>
+  <p>For example, if you want to convert 75 kilograms to pounds, the calculation looks like this: <code>75 &times; 2.20462 = 165.346 lbs</code>. This means a person who weighs 75 kg weighs approximately 165.35 pounds. The formula works for any kilogram value, whether you are converting body weight, luggage weight, or ingredients for a recipe.</p>
+  <p>For quick mental math, you can use the simplified approximation of multiplying by 2.2. This gives you a result that is close enough for everyday purposes. However, for scientific, medical, or shipping calculations where precision matters, always use the full factor of 2.20462 or even the more precise value of 2.20462262185.</p>
+
+  <h2>Kilograms to Pounds Reference Table</h2>
+  <table class="ref-table">
+    <thead>
+      <tr><th>Kilograms (kg)</th><th>Pounds (lbs)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>2.20462</td></tr>
+      <tr><td>2</td><td>4.40924</td></tr>
+      <tr><td>5</td><td>11.0231</td></tr>
+      <tr><td>10</td><td>22.0462</td></tr>
+      <tr><td>15</td><td>33.0693</td></tr>
+      <tr><td>20</td><td>44.0924</td></tr>
+      <tr><td>25</td><td>55.1155</td></tr>
+      <tr><td>30</td><td>66.1386</td></tr>
+      <tr><td>40</td><td>88.1848</td></tr>
+      <tr><td>50</td><td>110.231</td></tr>
+      <tr><td>60</td><td>132.277</td></tr>
+      <tr><td>70</td><td>154.324</td></tr>
+      <tr><td>75</td><td>165.346</td></tr>
+      <tr><td>80</td><td>176.37</td></tr>
+      <tr><td>90</td><td>198.416</td></tr>
+      <tr><td>100</td><td>220.462</td></tr>
+      <tr><td>150</td><td>330.693</td></tr>
+      <tr><td>200</td><td>440.924</td></tr>
+      <tr><td>250</td><td>551.155</td></tr>
+      <tr><td>500</td><td>1102.31</td></tr>
+    </tbody>
+  </table>
+
+  <h2>When Do You Need to Convert kg to lbs?</h2>
+  <p>The kilogram-to-pound conversion comes up more often than you might expect. Here are some of the most common situations where you will need it:</p>
+  <ul>
+    <li><strong>Travel and luggage limits:</strong> Most international airlines measure baggage allowances in kilograms, but if you are packing at home in the US, your bathroom scale likely reads in pounds. Knowing how to convert between the two helps you avoid overweight baggage fees at the airport. A typical checked bag limit of 23 kg is about 50.7 lbs.</li>
+    <li><strong>Cooking and recipe conversions:</strong> Recipes from Europe, Asia, and many other regions list ingredients in grams and kilograms. If your kitchen scale measures in pounds and ounces, you will need to convert to follow the recipe accurately. Even a small error can affect baking results.</li>
+    <li><strong>Fitness and gym weights:</strong> Gyms around the world use either kilogram or pound plates. If you follow a training program designed in metric units but your gym uses imperial plates, a quick conversion ensures you load the correct weight on the bar.</li>
+    <li><strong>Shipping and package weights:</strong> Carriers like USPS, UPS, and FedEx quote domestic shipping rates in pounds, while international shipments often reference kilograms. Converting between the two is essential for accurate cost estimates.</li>
+    <li><strong>Health and body weight:</strong> US doctors and medical records typically use pounds, but many international health guidelines and BMI charts reference kilograms. If you track your weight in one system and need to report it in the other, a reliable converter saves time and avoids errors.</li>
+  </ul>
+
+  <h2>Why Use freeunitconvert.app?</h2>
+  <p>There are plenty of unit converters on the internet, but freeunitconvert.app is built to be the one you actually want to use every day. Here is what sets it apart:</p>
+  <ul>
+    <li><strong>Works offline:</strong> As a progressive web app, freeunitconvert.app caches all its resources after your first visit. You can convert units on a plane, in a basement, or anywhere else without a network connection.</li>
+    <li><strong>No ads, ever:</strong> The interface is clean and distraction-free. There are no banner ads, pop-ups, or cookie consent walls slowing you down. You open the page and start converting immediately.</li>
+    <li><strong>Saves your preferences:</strong> Your theme setting, last-used units, and other preferences are stored locally in your browser. Every time you return, the app picks up right where you left off.</li>
+    <li><strong>Instant results:</strong> The converter calculates as you type, with no submit button to click and no page reload. Results appear in real time with high precision.</li>
+    <li><strong>Eight unit categories:</strong> Beyond weight, you can convert temperature, length, volume, speed, area, time, and data. One tool covers all the conversions you are likely to need.</li>
+    <li><strong>More accurate than Google's converter widget:</strong> Our converter uses precise conversion factors and displays up to 10 significant digits, giving you more reliable results than the quick-answer boxes in search engines.</li>
+  </ul>
+
+  <h2>Frequently Asked Questions</h2>
+
+  <details>
+    <summary>How many pounds are in a kilogram?</summary>
+    <p>1 kilogram is equal to 2.20462 pounds. This conversion factor is based on the international avoirdupois pound, which is the standard pound used in the United States and other countries that use the imperial system.</p>
+  </details>
+
+  <details>
+    <summary>What is the formula for kg to lbs?</summary>
+    <p>Multiply the number of kilograms by 2.20462 to get the equivalent in pounds. For example, 10 kg &times; 2.20462 = 22.0462 lbs.</p>
+  </details>
+
+  <details>
+    <summary>Is 1 kg exactly 2.2 pounds?</summary>
+    <p>No, 1 kg = 2.20462262185 lbs. 2.2 is an approximation. While 2.2 is commonly used for quick mental math, the more precise value of 2.20462 should be used when accuracy matters.</p>
+  </details>
+
+  <details>
+    <summary>How do I convert lbs back to kg?</summary>
+    <p>Divide the number of pounds by 2.20462 to get the equivalent in kilograms, or use our lbs to kg converter for instant results.</p>
+  </details>
+
+  <details>
+    <summary>Does this converter work offline?</summary>
+    <p>Yes, it's a PWA that caches everything after your first visit. You can convert units even without an internet connection.</p>
+  </details>
+
+  <a href="/" class="cta-button">Convert More Units &rarr;</a>
+
+  <div class="related-pages">
+    <h2>Related Conversions</h2>
+    <ul>
+      <li><a href="celsius-to-fahrenheit.html">Celsius to Fahrenheit</a></li>
+      <li><a href="miles-to-km.html">Miles to Kilometers</a></li>
+      <li><a href="inches-to-cm.html">Inches to Centimeters</a></li>
+      <li><a href="lbs-to-kg.html">Pounds to Kilograms</a></li>
+      <li><a href="/">All Unit Converters</a></li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>&copy; freeunitconvert.app</p>
+    <div class="more-tools-placeholder"></div>
+  </footer>
+</div>
+
+<a href="https://freesuite.app" class="badge" target="_blank" rel="noopener">by freesuite.app</a>
+
+<script>
+(function() {
+  const toggle = document.getElementById('themeToggle');
+  const sunIcon = document.getElementById('sunIcon');
+  const moonIcon = document.getElementById('moonIcon');
+  const html = document.documentElement;
+
+  function applyTheme(theme) {
+    html.setAttribute('data-theme', theme);
+    if (theme === 'dark') {
+      sunIcon.style.display = 'none';
+      moonIcon.style.display = 'block';
+    } else {
+      sunIcon.style.display = 'block';
+      moonIcon.style.display = 'none';
+    }
+  }
+
+  const saved = localStorage.getItem('suite_theme');
+  if (saved) {
+    applyTheme(saved);
+  }
+
+  toggle.addEventListener('click', function() {
+    const current = html.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    localStorage.setItem('suite_theme', next);
+    applyTheme(next);
+  });
+})();
+
+(function() {
+  const input = document.getElementById('kgInput');
+  const result = document.getElementById('lbsResult');
+
+  function formatResult(num) {
+    var s = num.toPrecision(10);
+    s = parseFloat(s).toString();
+    return s;
+  }
+
+  input.addEventListener('input', function() {
+    var val = parseFloat(input.value);
+    if (isNaN(val) || input.value.trim() === '') {
+      result.textContent = '— lbs';
+      return;
+    }
+    var lbs = val * 2.20462;
+    result.textContent = formatResult(lbs) + ' lbs';
+  });
+})();
+</script>
+</body>
+</html>

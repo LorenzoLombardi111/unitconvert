@@ -1,0 +1,198 @@
+# freeunitconvert.app — Full Documentation
+
+## Overview
+freeunitconvert.app is a free, open, client-side unit converter web application. It converts units across eight categories instantly in the browser with no server calls, no ads, no tracking, and no sign-up. It works offline as a progressive web app.
+
+## URL
+https://freeunitconvert.app/
+
+## Categories and Units
+
+### Length (base unit: Meter)
+| Unit | Factor (to meters) |
+|------|-------------------|
+| Kilometer | 1000 |
+| Meter | 1 |
+| Centimeter | 0.01 |
+| Millimeter | 0.001 |
+| Micrometer | 1e-6 |
+| Nanometer | 1e-9 |
+| Mile | 1609.344 |
+| Yard | 0.9144 |
+| Foot | 0.3048 |
+| Inch | 0.0254 |
+| Nautical Mile | 1852 |
+
+### Weight (base unit: Kilogram)
+| Unit | Factor (to kilograms) |
+|------|----------------------|
+| Kilogram | 1 |
+| Gram | 0.001 |
+| Milligram | 1e-6 |
+| Metric Ton | 1000 |
+| Pound | 0.45359237 |
+| Ounce | 0.028349523125 |
+| Stone | 6.35029318 |
+| US Ton | 907.18474 |
+| Imperial Ton | 1016.0469088 |
+
+### Temperature (special formulas)
+- Celsius to Fahrenheit: F = C × 9/5 + 32
+- Fahrenheit to Celsius: C = (F − 32) × 5/9
+- Celsius to Kelvin: K = C + 273.15
+- Kelvin to Celsius: C = K − 273.15
+- Fahrenheit to Kelvin: K = (F − 32) × 5/9 + 273.15
+- Kelvin to Fahrenheit: F = (K − 273.15) × 9/5 + 32
+
+### Volume (base unit: Liter)
+| Unit | Factor (to liters) |
+|------|-------------------|
+| Liter | 1 |
+| Milliliter | 0.001 |
+| Cubic Meter | 1000 |
+| Gallon (US) | 3.785411784 |
+| Gallon (UK) | 4.54609 |
+| Quart | 0.946352946 |
+| Pint | 0.473176473 |
+| Cup | 0.2365882365 |
+| Fluid Ounce | 0.0295735295625 |
+| Tablespoon | 0.01478676478125 |
+| Teaspoon | 0.00492892159375 |
+
+### Area (base unit: Square Meter)
+| Unit | Factor (to sq meters) |
+|------|-----------------------|
+| Square Meter | 1 |
+| Square Kilometer | 1e6 |
+| Square Mile | 2589988.110336 |
+| Square Yard | 0.83612736 |
+| Square Foot | 0.09290304 |
+| Square Inch | 0.00064516 |
+| Hectare | 10000 |
+| Acre | 4046.8564224 |
+
+### Speed (base unit: m/s)
+| Unit | Factor (to m/s) |
+|------|----------------|
+| m/s | 1 |
+| km/h | 0.277778 |
+| mph | 0.44704 |
+| Knot | 0.514444 |
+| ft/s | 0.3048 |
+| Mach | 343 |
+
+### Data (base unit: Byte)
+| Unit | Factor (to bytes) |
+|------|-------------------|
+| Bit | 0.125 |
+| Byte | 1 |
+| Kilobyte | 1000 |
+| Megabyte | 1e6 |
+| Gigabyte | 1e9 |
+| Terabyte | 1e12 |
+| Petabyte | 1e15 |
+| Kibibyte | 1024 |
+| Mebibyte | 1048576 |
+| Gibibyte | 1073741824 |
+| Tebibyte | 1099511627776 |
+
+### Time (base unit: Second)
+| Unit | Factor (to seconds) |
+|------|---------------------|
+| Nanosecond | 1e-9 |
+| Microsecond | 1e-6 |
+| Millisecond | 0.001 |
+| Second | 1 |
+| Minute | 60 |
+| Hour | 3600 |
+| Day | 86400 |
+| Week | 604800 |
+| Month (30 days) | 2592000 |
+| Year (365 days) | 31536000 |
+
+## Conversion Method
+All conversions (except temperature) work by converting the input value to the base unit, then from the base unit to the target unit:
+  result = input_value × (from_unit_factor / to_unit_factor)
+
+Temperature uses direct formulas listed above.
+
+## Popular Conversion Pages
+
+### Kilograms to Pounds
+- URL: https://freeunitconvert.app/kg-to-lbs.html
+- Formula: kg × 2.20462 = lbs
+- Key fact: 1 kg = exactly 2.20462262185 lbs
+- Common use: travel luggage limits, fitness, cooking, shipping
+
+### Celsius to Fahrenheit
+- URL: https://freeunitconvert.app/celsius-to-fahrenheit.html
+- Formula: °C × 9/5 + 32 = °F
+- Key facts: 0°C = 32°F, 100°C = 212°F, 37°C = 98.6°F, -40°C = -40°F
+- Common use: weather, cooking, medical temperature, science
+
+### Miles to Kilometers
+- URL: https://freeunitconvert.app/miles-to-km.html
+- Formula: miles × 1.60934 = km
+- Key fact: 1 mile = exactly 1.609344 km
+- Common use: running (marathon = 42.195 km), driving, travel
+
+### Inches to Centimeters
+- URL: https://freeunitconvert.app/inches-to-cm.html
+- Formula: inches × 2.54 = cm (exact)
+- Key fact: 1 inch = exactly 25.4 mm by international definition since 1959
+- Common use: screen sizes, height, construction, clothing
+
+### Pounds to Kilograms
+- URL: https://freeunitconvert.app/lbs-to-kg.html
+- Formula: lbs × 0.453592 = kg
+- Key fact: 1 lb = exactly 0.45359237 kg
+- Common use: international travel, medical records, Olympic sports
+
+## Features
+- Instant conversion as you type (no submit button needed)
+- Copy result to clipboard with one click
+- Swap units button to reverse conversion direction
+- Conversion formula and quick reference table for every unit pair
+- Dark mode with preference saved to localStorage
+- Last-used category and units restored on reload
+- Works offline (progressive web app with service worker)
+- Fully responsive — desktop, tablet, and mobile
+- No tracking, no cookies, no server-side processing
+- No ads, no sign-up, completely free
+
+## Accuracy
+- IEEE 754 double-precision floating-point arithmetic
+- All factors from internationally recognized definitions (NIST, SI)
+- Results display up to 10 significant digits, no trailing zeros
+- Automatic scientific notation for very large or very small values
+- Temperature uses exact formulas, not rounded multipliers
+
+## Technical Details
+- Single-page application: HTML + CSS + JavaScript, no framework
+- Service worker: cache-first strategy, works fully offline
+- Storage: localStorage for theme preference and last-used units
+- No external API calls — all computation is client-side
+- Progressive Web App: installable on mobile and desktop
+
+## FAQ
+
+Q: Is freeunitconvert.app free?
+A: Yes, completely free with no sign-up, no ads, and no hidden costs.
+
+Q: How many unit categories are supported?
+A: Eight: Length, Weight, Temperature, Volume, Area, Speed, Data, and Time.
+
+Q: Can I convert temperature units?
+A: Yes, between Celsius, Fahrenheit, and Kelvin using exact formulas.
+
+Q: Does it handle very large or small numbers?
+A: Yes, with up to 10 significant digits and automatic scientific notation.
+
+Q: Can I use it on mobile?
+A: Yes, the interface is fully responsive and can be installed as an app.
+
+Q: Does it save my preferences?
+A: Yes, category, units, and dark mode are saved in localStorage.
+
+Q: Does it work offline?
+A: Yes, after the first visit all assets are cached by the service worker.

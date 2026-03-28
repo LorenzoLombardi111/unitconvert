@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Convert Miles to Kilometers — Free Calculator</title>
+<meta name="description" content="Convert miles to kilometers instantly with our free online calculator. No ads, works offline. Includes formula, reference table, and FAQ.">
+<link rel="canonical" href="https://freeunitconvert.app/miles-to-km.html">
+<meta property="og:title" content="Convert Miles to Kilometers — Free Calculator">
+<meta property="og:description" content="Convert miles to kilometers instantly with our free online calculator. No ads, works offline. Includes formula, reference table, and FAQ.">
+<meta property="og:url" content="https://freeunitconvert.app/miles-to-km.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="freeunitconvert.app">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Convert Miles to Kilometers — Free Calculator">
+<meta name="twitter:description" content="Convert miles to kilometers instantly with our free online calculator. No ads, works offline. Includes formula, reference table, and FAQ.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Convert Miles to Kilometers — Free Calculator",
+    "description": "Convert miles to kilometers instantly with our free online calculator. Includes conversion formula, reference table, and FAQ.",
+    "dateModified": "2026-03-28",
+    "author": {
+      "@type": "Organization",
+      "name": "freeunitconvert.app"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How many kilometers are in a mile?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "1 mile = 1.60934 km (exactly 1.609344 km)"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many miles are in a kilometer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "1 km = 0.621371 miles"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a marathon in kilometers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A marathon is 26.2 miles or 42.195 km"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does this work without internet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, the converter works fully offline after the first visit"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "freeunitconvert.app",
+    "applicationCategory": "UtilitiesApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://freeunitconvert.app/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Unit Converter",
+        "item": "https://freeunitconvert.app/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Miles to Kilometers"
+      }
+    ]
+  }
+]
+</script>
+<style>
+  :root {
+    --bg: #faf9f6;
+    --surface: #f4f2ee;
+    --border: #e8e4dd;
+    --text: #1a1917;
+    --text-secondary: #6b6860;
+    --text-muted: #9a958c;
+    --accent: #C49A2A;
+  }
+
+  [data-theme="dark"] {
+    --bg: #141412;
+    --surface: #1e1c1a;
+    --border: #2e2b27;
+    --text: #f0ede8;
+    --text-secondary: #a8a49c;
+    --text-muted: #706c64;
+    --accent: #D4A835;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Lora', serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 24px;
+  }
+
+  .breadcrumb {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 32px;
+  }
+
+  .breadcrumb a {
+    color: var(--text-muted);
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover {
+    color: var(--text-secondary);
+    text-decoration: underline;
+  }
+
+  .breadcrumb span {
+    margin: 0 6px;
+  }
+
+  .theme-toggle {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    line-height: 1;
+    z-index: 100;
+    color: var(--text);
+  }
+
+  .theme-toggle:hover {
+    border-color: var(--text-muted);
+  }
+
+  .updated {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+  }
+
+  h1 {
+    font-family: 'Lora', serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 12px;
+    color: var(--text);
+  }
+
+  h2 {
+    font-family: 'Lora', serif;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-top: 40px;
+    margin-bottom: 16px;
+    color: var(--text);
+  }
+
+  p {
+    margin-bottom: 16px;
+    color: var(--text-secondary);
+  }
+
+  .converter {
+    margin: 32px 0;
+  }
+
+  .converter label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .converter-input {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    width: 100%;
+    color: var(--text);
+    outline: none;
+    margin-bottom: 12px;
+  }
+
+  .converter-input:focus {
+    border-color: var(--accent);
+  }
+
+  .converter-result {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    width: 100%;
+    color: var(--text-muted);
+  }
+
+  .converter-formula {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 8px;
+    text-align: center;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0 24px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+  }
+
+  thead th {
+    background: var(--surface);
+    text-align: left;
+    padding: 10px 12px;
+    font-weight: 600;
+    color: var(--text);
+    border: 1px solid var(--border);
+  }
+
+  tbody td {
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+  }
+
+  tbody tr:hover {
+    background: var(--surface);
+  }
+
+  ul {
+    margin: 0 0 16px 24px;
+    color: var(--text-secondary);
+  }
+
+  li {
+    margin-bottom: 6px;
+  }
+
+  details {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    overflow: hidden;
+  }
+
+  summary {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 14px 16px;
+    cursor: pointer;
+    color: var(--text);
+    background: var(--surface);
+    list-style: none;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  summary::before {
+    content: "+ ";
+    font-weight: 400;
+    color: var(--text-muted);
+  }
+
+  details[open] summary::before {
+    content: "- ";
+  }
+
+  details p {
+    padding: 12px 16px;
+    margin: 0;
+    font-size: 15px;
+  }
+
+  .cta-wrapper {
+    text-align: center;
+    margin: 40px 0;
+  }
+
+  .cta-button {
+    display: inline-block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    background: var(--accent);
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+
+  .cta-button:hover {
+    opacity: 0.9;
+  }
+
+  .related {
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+  }
+
+  .related h2 {
+    margin-top: 0;
+    font-size: 18px;
+  }
+
+  .related a {
+    display: inline-block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: var(--accent);
+    text-decoration: none;
+    margin-right: 20px;
+    margin-bottom: 8px;
+  }
+
+  .related a:hover {
+    text-decoration: underline;
+  }
+
+  footer {
+    text-align: center;
+    color: var(--text-muted);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+  }
+
+  .suite-badge {
+    position: fixed;
+    bottom: 12px;
+    right: 12px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    color: var(--text-muted);
+    text-decoration: none;
+    z-index: 100;
+  }
+
+  .suite-badge:hover {
+    color: var(--text-secondary);
+  }
+</style>
+</head>
+<body>
+
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"></button>
+
+<div class="container">
+  <nav class="breadcrumb">
+    <a href="/">Home</a><span>&gt;</span><a href="/">Unit Converter</a><span>&gt;</span>Miles to Kilometers
+  </nav>
+
+  <p class="updated">Last updated: March 28, 2026</p>
+
+  <h1>Convert Miles to Kilometers — Free Calculator</h1>
+
+  <div class="converter">
+    <label for="milesInput">Miles</label>
+    <input type="number" id="milesInput" class="converter-input" placeholder="Enter miles" step="any">
+    <label for="kmResult">Kilometers</label>
+    <div class="converter-result" id="kmResult">—</div>
+    <div class="converter-formula">miles &times; 1.60934 = km</div>
+  </div>
+
+  <h2>How to Convert Miles to Kilometers</h2>
+  <p>Converting miles to kilometers is straightforward once you know the conversion factor. The formula is simple: multiply the number of miles by 1.60934 to get the equivalent distance in kilometers. More precisely, 1 mile is exactly equal to 1.609344 kilometers by international agreement, a definition that has been standardized since 1959 when the international yard and pound agreement was signed.</p>
+  <p>To illustrate with a worked example, consider the marathon distance of 26.2 miles. Applying the formula: 26.2 &times; 1.60934 = 42.165 km. This is why marathon race results around the world list the official distance as 42.195 km (the exact distance is 26 miles and 385 yards). Whether you are converting a short jogging route or a cross-country road trip, the same multiplication applies every time.</p>
+  <p>For a quick mental estimate, you can remember that one mile is roughly 1.6 kilometers. This approximation is close enough for everyday use. If you want even more precision for scientific or engineering work, use the exact factor of 1.609344. Our calculator above handles the math for you instantly, so there is no need to reach for a pocket calculator or do mental arithmetic.</p>
+
+  <h2>Miles to Kilometers Reference Table</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Miles</th>
+        <th>Kilometers</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>0.5</td><td>0.80467</td></tr>
+      <tr><td>1</td><td>1.60934</td></tr>
+      <tr><td>2</td><td>3.21869</td></tr>
+      <tr><td>3</td><td>4.82803</td></tr>
+      <tr><td>5</td><td>8.04672</td></tr>
+      <tr><td>10</td><td>16.0934</td></tr>
+      <tr><td>13.1 (half marathon)</td><td>21.0824</td></tr>
+      <tr><td>15</td><td>24.1402</td></tr>
+      <tr><td>20</td><td>32.1869</td></tr>
+      <tr><td>25</td><td>40.2336</td></tr>
+      <tr><td>26.2 (marathon)</td><td>42.1647</td></tr>
+      <tr><td>30</td><td>48.2803</td></tr>
+      <tr><td>50</td><td>80.4672</td></tr>
+      <tr><td>60</td><td>96.5606</td></tr>
+      <tr><td>75</td><td>120.701</td></tr>
+      <tr><td>100</td><td>160.934</td></tr>
+      <tr><td>150</td><td>241.402</td></tr>
+      <tr><td>200</td><td>321.869</td></tr>
+      <tr><td>500</td><td>804.672</td></tr>
+      <tr><td>1000</td><td>1609.34</td></tr>
+    </tbody>
+  </table>
+
+  <h2>When Do You Need Miles to Kilometers?</h2>
+  <p>The miles-to-kilometers conversion comes up more often than you might expect. Here are the most common situations where you will need it:</p>
+  <ul>
+    <li><strong>Running and marathon distances</strong> — Race results and training plans often switch between miles and kilometers. Runners in the United States train in miles but compete in races measured in kilometers internationally.</li>
+    <li><strong>Driving in metric countries</strong> — If you are renting a car in Europe, Canada, Australia, or most other countries, the speedometer and road signs display kilometers. Knowing the conversion helps you gauge distances and speed limits.</li>
+    <li><strong>Travel planning</strong> — When researching destinations abroad, distances between cities are typically given in kilometers. Converting to miles helps you estimate driving times and plan your itinerary.</li>
+    <li><strong>Road signs abroad</strong> — Highway signs in metric countries show distances in kilometers. A quick conversion tells you how far you really have to go.</li>
+    <li><strong>Flight distances</strong> — Airlines and aviation often report distances in both miles and kilometers. Frequent flyer programs typically use miles, while international aviation standards reference kilometers.</li>
+    <li><strong>Map reading</strong> — Topographic maps and online mapping tools may display distances in kilometers depending on your region settings. Converting helps you plan hikes, bike rides, and road trips accurately.</li>
+  </ul>
+
+  <h2>Why Use freeunitconvert.app?</h2>
+  <p>There are plenty of unit converters on the web, but freeunitconvert.app is built differently. The converter works entirely offline after your first visit, so you can use it on a plane, in a remote area, or anywhere without a reliable internet connection. There are no ads cluttering the interface, no pop-ups interrupting your workflow, and no tracking scripts slowing down the page.</p>
+  <p>Results appear instantly as you type, with no need to press a convert button or wait for a server response. Your preferences, including your dark mode setting, are saved locally so the experience feels seamless every time you return. And beyond miles to kilometers, the site offers a full suite of unit categories covering weight, temperature, length, volume, and more, all in the same clean, fast interface.</p>
+
+  <h2>Frequently Asked Questions</h2>
+  <details>
+    <summary>How many kilometers are in a mile?</summary>
+    <p>1 mile = 1.60934 km (exactly 1.609344 km)</p>
+  </details>
+  <details>
+    <summary>How many miles are in a kilometer?</summary>
+    <p>1 km = 0.621371 miles</p>
+  </details>
+  <details>
+    <summary>What is a marathon in kilometers?</summary>
+    <p>A marathon is 26.2 miles or 42.195 km</p>
+  </details>
+  <details>
+    <summary>Does this work without internet?</summary>
+    <p>Yes, the converter works fully offline after the first visit</p>
+  </details>
+
+  <div class="cta-wrapper">
+    <a href="/" class="cta-button">Convert More Units &rarr;</a>
+  </div>
+
+  <div class="related">
+    <h2>Related Conversions</h2>
+    <a href="/kg-to-lbs.html">Kilograms to Pounds</a>
+    <a href="/celsius-to-fahrenheit.html">Celsius to Fahrenheit</a>
+    <a href="/inches-to-cm.html">Inches to Centimeters</a>
+    <a href="/lbs-to-kg.html">Pounds to Kilograms</a>
+    <a href="/">All Unit Converters</a>
+  </div>
+
+  <footer>
+    <p>&copy; freeunitconvert.app</p>
+    <div class="more-tools-placeholder"></div>
+  </footer>
+</div>
+
+<a href="https://freesuite.app" class="suite-badge" target="_blank" rel="noopener">by freesuite.app</a>
+
+<script>
+(function() {
+  // Converter
+  var input = document.getElementById('milesInput');
+  var result = document.getElementById('kmResult');
+
+  input.addEventListener('input', function() {
+    var val = parseFloat(input.value);
+    if (isNaN(val) || input.value.trim() === '') {
+      result.textContent = '\u2014';
+      return;
+    }
+    var km = val * 1.60934;
+    result.textContent = parseFloat(km.toPrecision(10)) + ' km';
+  });
+
+  // Dark mode
+  var toggle = document.getElementById('themeToggle');
+  var html = document.documentElement;
+
+  function applyTheme(theme) {
+    html.setAttribute('data-theme', theme);
+    toggle.textContent = theme === 'dark' ? '\u2600\uFE0F' : '\uD83C\uDF19';
+  }
+
+  var saved = localStorage.getItem('suite_theme');
+  if (saved === 'dark' || saved === 'light') {
+    applyTheme(saved);
+  } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    applyTheme('dark');
+  } else {
+    applyTheme('light');
+  }
+
+  toggle.addEventListener('click', function() {
+    var current = html.getAttribute('data-theme');
+    var next = current === 'dark' ? 'light' : 'dark';
+    localStorage.setItem('suite_theme', next);
+    applyTheme(next);
+  });
+})();
+</script>
+</body>
+</html>

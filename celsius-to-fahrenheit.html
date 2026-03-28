@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Convert Celsius to Fahrenheit — Free Calculator</title>
+<meta name="description" content="Convert Celsius to Fahrenheit instantly with our free calculator. Use the formula C × 9/5 + 32, reference tables, and common temperatures.">
+<link rel="canonical" href="https://freeunitconvert.app/celsius-to-fahrenheit.html">
+<meta property="og:title" content="Convert Celsius to Fahrenheit — Free Calculator">
+<meta property="og:description" content="Convert Celsius to Fahrenheit instantly with our free calculator. Use the formula C × 9/5 + 32, reference tables, and common temperatures.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://freeunitconvert.app/celsius-to-fahrenheit.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Convert Celsius to Fahrenheit — Free Calculator">
+<meta name="twitter:description" content="Convert Celsius to Fahrenheit instantly with our free calculator. Use the formula C × 9/5 + 32, reference tables, and common temperatures.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Convert Celsius to Fahrenheit — Free Calculator",
+    "description": "Convert Celsius to Fahrenheit instantly with our free calculator. Includes formula explanation, reference table, and common temperature conversions.",
+    "dateModified": "2026-03-28",
+    "author": {
+      "@type": "Organization",
+      "name": "freeunitconvert.app"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is 0°C in Fahrenheit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "0°C is equal to 32°F. This is the freezing point of water."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the formula for Celsius to Fahrenheit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "F = C × 9/5 + 32"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why isn't temperature conversion a simple multiplication?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Because Fahrenheit and Celsius have different zero points. The +32 offset accounts for this difference."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What temperature is the same in Celsius and Fahrenheit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "-40 degrees is the same on both scales (-40°C = -40°F)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I convert Fahrenheit back to Celsius?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "C = (F - 32) × 5/9"
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "freeunitconvert.app",
+    "applicationCategory": "UtilitiesApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://freeunitconvert.app/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Unit Converter",
+        "item": "https://freeunitconvert.app/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Celsius to Fahrenheit"
+      }
+    ]
+  }
+]
+</script>
+<style>
+  :root {
+    --bg: #faf9f6;
+    --surface: #f4f2ee;
+    --border: #e8e4dd;
+    --text: #1a1917;
+    --text-secondary: #6b6860;
+    --text-muted: #9a958c;
+    --accent: #C49A2A;
+  }
+  [data-theme="dark"] {
+    --bg: #141412;
+    --surface: #1e1c1a;
+    --border: #2e2b27;
+    --text: #f0ede8;
+    --text-secondary: #a8a49c;
+    --text-muted: #706c64;
+    --accent: #D4A835;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Lora', serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 24px;
+  }
+  .breadcrumb {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 32px;
+  }
+  .breadcrumb a {
+    color: var(--text-muted);
+    text-decoration: none;
+  }
+  .breadcrumb a:hover {
+    color: var(--accent);
+  }
+  .breadcrumb span { margin: 0 6px; }
+  .last-updated {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+  }
+  h1 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 16px;
+    color: var(--text);
+  }
+  h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-top: 40px;
+    margin-bottom: 16px;
+    color: var(--text);
+  }
+  p { margin-bottom: 16px; }
+  .converter {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 32px;
+  }
+  .converter label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    display: block;
+    margin-bottom: 6px;
+  }
+  .converter-input {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    width: 100%;
+    color: var(--text);
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  .converter-input:focus {
+    border-color: var(--accent);
+  }
+  .converter-result {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    width: 100%;
+    color: var(--text-muted);
+    margin-top: 12px;
+  }
+  .converter-formula {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-top: 12px;
+    text-align: center;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 16px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+  }
+  thead th {
+    background: var(--surface);
+    font-weight: 600;
+    text-align: left;
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    color: var(--text);
+  }
+  tbody td {
+    padding: 9px 14px;
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+  }
+  details {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    overflow: hidden;
+  }
+  summary {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 14px 18px;
+    cursor: pointer;
+    color: var(--text);
+    background: var(--surface);
+    list-style: none;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::before {
+    content: "+";
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    margin-right: 10px;
+    color: var(--text-muted);
+  }
+  details[open] summary::before { content: "\2212"; }
+  details .faq-answer {
+    padding: 4px 18px 16px;
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.65;
+  }
+  .cta-wrap { text-align: center; margin: 40px 0; }
+  .cta-btn {
+    display: inline-block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    background: var(--accent);
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: opacity 0.15s;
+  }
+  .cta-btn:hover { opacity: 0.88; }
+  .related {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+  }
+  .related h2 { font-size: 18px; margin-top: 0; }
+  .related ul {
+    list-style: none;
+    padding: 0;
+  }
+  .related li { margin-bottom: 8px; }
+  .related a {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .related a:hover { text-decoration: underline; }
+  footer {
+    text-align: center;
+    margin-top: 48px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+  .theme-toggle {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: var(--text);
+    z-index: 100;
+    line-height: 1;
+    padding: 0;
+  }
+  .theme-toggle:hover { border-color: var(--accent); }
+  .badge {
+    position: fixed;
+    bottom: 12px;
+    right: 14px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    color: var(--text-muted);
+    text-decoration: none;
+    z-index: 100;
+  }
+  .badge:hover { color: var(--accent); }
+  code {
+    font-size: 14px;
+    background: var(--surface);
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+</style>
+</head>
+<body>
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">&#9789;</button>
+<a class="badge" href="https://freesuite.app">by freesuite.app</a>
+
+<div class="container">
+  <nav class="breadcrumb">
+    <a href="/">Home</a><span>&gt;</span><a href="/">Unit Converter</a><span>&gt;</span>Celsius to Fahrenheit
+  </nav>
+
+  <p class="last-updated">Last updated: March 28, 2026</p>
+
+  <h1>Convert Celsius to Fahrenheit &mdash; Free Calculator</h1>
+
+  <div class="converter">
+    <label for="celsiusInput">Degrees Celsius (&deg;C)</label>
+    <input class="converter-input" type="number" id="celsiusInput" placeholder="Enter &deg;C" autofocus>
+    <div class="converter-result" id="fahrenheitResult">&mdash; &deg;F</div>
+    <div class="converter-formula">&deg;C &times; 9/5 + 32 = &deg;F</div>
+  </div>
+
+  <h2>How to Convert Celsius to Fahrenheit</h2>
+  <p>Converting Celsius to Fahrenheit relies on a straightforward formula: multiply the Celsius temperature by 9/5 (or 1.8), then add 32. Written out, that looks like <strong>F = C &times; 9/5 + 32</strong>. The multiplication accounts for the difference in degree size between the two scales&mdash;a single Fahrenheit degree is smaller than a Celsius degree, so you need more of them to cover the same range. The addition of 32 accounts for the fact that the two scales have different zero points: water freezes at 0&deg;C but at 32&deg;F.</p>
+  <p>Let&rsquo;s walk through a practical example. Normal human body temperature is 37&deg;C. Plugging that into the formula: 37 &times; 9/5 = 66.6, and 66.6 + 32 = 98.6. So 37&deg;C equals 98.6&deg;F&mdash;exactly the figure your doctor expects to see. This two-step process (scale then shift) is what makes temperature conversion different from simpler unit conversions like kilometers to miles, where a single multiplication factor is enough.</p>
+  <p>Understanding why the formula works helps you remember it. Anders Celsius designed his scale around water: 0 for freezing, 100 for boiling. Daniel Fahrenheit chose different reference points entirely, placing water&rsquo;s freezing point at 32 and boiling point at 212. That gives Fahrenheit 180 degrees between the same two physical events that Celsius covers in 100 degrees. The ratio 180/100 simplifies to 9/5, which is the multiplier in the formula. The +32 then shifts the result so freezing lines up correctly.</p>
+
+  <h2>Celsius to Fahrenheit Reference Table</h2>
+  <table>
+    <thead>
+      <tr><th>Celsius (&deg;C)</th><th>Fahrenheit (&deg;F)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>-40</td><td>-40</td></tr>
+      <tr><td>-30</td><td>-22</td></tr>
+      <tr><td>-20</td><td>-4</td></tr>
+      <tr><td>-10</td><td>14</td></tr>
+      <tr><td>0</td><td>32</td></tr>
+      <tr><td>5</td><td>41</td></tr>
+      <tr><td>10</td><td>50</td></tr>
+      <tr><td>15</td><td>59</td></tr>
+      <tr><td>20</td><td>68</td></tr>
+      <tr><td>25</td><td>77</td></tr>
+      <tr><td>30</td><td>86</td></tr>
+      <tr><td>37</td><td>98.6</td></tr>
+      <tr><td>40</td><td>104</td></tr>
+      <tr><td>50</td><td>122</td></tr>
+      <tr><td>60</td><td>140</td></tr>
+      <tr><td>70</td><td>158</td></tr>
+      <tr><td>80</td><td>176</td></tr>
+      <tr><td>90</td><td>194</td></tr>
+      <tr><td>100</td><td>212</td></tr>
+      <tr><td>200</td><td>392</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Common Temperature References</h2>
+  <p>Knowing a few key temperature equivalents by heart makes everyday life easier, especially if you travel between countries that use different scales. Here are the most useful reference points:</p>
+  <p><strong>Body temperature:</strong> 37&deg;C = 98.6&deg;F. This is normal body temperature for most adults, and it&rsquo;s the most commonly converted medical temperature. A reading above 38&deg;C (100.4&deg;F) is generally considered a fever.</p>
+  <p><strong>Water freezing:</strong> 0&deg;C = 32&deg;F. Below this, roads ice over and pipes can freeze. This is the foundational reference point of the Celsius scale.</p>
+  <p><strong>Water boiling:</strong> 100&deg;C = 212&deg;F. At standard atmospheric pressure, water boils at this temperature. This defines the upper anchor of the Celsius scale.</p>
+  <p><strong>Room temperature:</strong> 20&ndash;22&deg;C = 68&ndash;72&deg;F. This is the comfortable indoor range most thermostats target.</p>
+  <p><strong>Oven temperatures:</strong> Common baking temperatures include 180&deg;C (356&deg;F) for cakes and cookies, 200&deg;C (392&deg;F) for roasting vegetables, and 220&deg;C (428&deg;F) for pizzas and bread. Converting oven temperatures accurately matters because even a small difference can affect your results.</p>
+
+  <h2>Why Use freeunitconvert.app for Temperature?</h2>
+  <p>Temperature conversion is not a simple multiplication&mdash;it involves both a scaling factor and an offset. Many quick-conversion tools get this wrong or only handle basic conversions. Our calculator applies the exact formula every time, so you can trust the result whether you&rsquo;re converting body temperatures, weather forecasts, or industrial readings.</p>
+  <p>The converter works entirely in your browser, which means it runs offline once the page has loaded. There is no server round-trip, so results appear instantly as you type. Beyond Celsius and Fahrenheit, we also support conversions to and from Kelvin, which is essential for scientific and engineering work. Everything is free, with no sign-up required.</p>
+
+  <h2>Frequently Asked Questions</h2>
+  <details>
+    <summary>What is 0&deg;C in Fahrenheit?</summary>
+    <div class="faq-answer">0&deg;C is equal to 32&deg;F. This is the freezing point of water at standard atmospheric pressure.</div>
+  </details>
+  <details>
+    <summary>What is the formula for Celsius to Fahrenheit?</summary>
+    <div class="faq-answer">F = C &times; 9/5 + 32. Multiply the Celsius value by 9/5 (or 1.8), then add 32 to get the Fahrenheit equivalent.</div>
+  </details>
+  <details>
+    <summary>Why isn&rsquo;t temperature conversion a simple multiplication?</summary>
+    <div class="faq-answer">Because Fahrenheit and Celsius have different zero points. The +32 offset accounts for this difference. Unlike converting meters to feet, where both scales start at zero, temperature scales are anchored to different physical references.</div>
+  </details>
+  <details>
+    <summary>What temperature is the same in Celsius and Fahrenheit?</summary>
+    <div class="faq-answer">-40 degrees is the same on both scales (-40&deg;C = -40&deg;F). This is the unique point where the two temperature scales intersect.</div>
+  </details>
+  <details>
+    <summary>How do I convert Fahrenheit back to Celsius?</summary>
+    <div class="faq-answer">C = (F - 32) &times; 5/9. Subtract 32 from the Fahrenheit value, then multiply the result by 5/9.</div>
+  </details>
+
+  <div class="cta-wrap">
+    <a class="cta-btn" href="/">Convert More Units &rarr;</a>
+  </div>
+
+  <div class="related">
+    <h2>Related Conversions</h2>
+    <ul>
+      <li><a href="/kg-to-lbs.html">Kilograms to Pounds</a></li>
+      <li><a href="/miles-to-km.html">Miles to Kilometers</a></li>
+      <li><a href="/inches-to-cm.html">Inches to Centimeters</a></li>
+      <li><a href="/lbs-to-kg.html">Pounds to Kilograms</a></li>
+      <li><a href="/">All Unit Converters</a></li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>&copy; freeunitconvert.app</p>
+    <div class="more-tools-placeholder"></div>
+  </footer>
+</div>
+
+<script>
+(function() {
+  var input = document.getElementById('celsiusInput');
+  var result = document.getElementById('fahrenheitResult');
+
+  input.addEventListener('input', function() {
+    var val = input.value.trim();
+    if (val === '' || isNaN(val)) {
+      result.textContent = '\u2014 \u00B0F';
+      return;
+    }
+    var c = parseFloat(val);
+    var f = c * 9 / 5 + 32;
+    var formatted = parseFloat(f.toPrecision(10));
+    result.textContent = formatted + ' \u00B0F';
+  });
+
+  // Dark mode
+  var toggle = document.getElementById('themeToggle');
+  var html = document.documentElement;
+
+  function applyTheme(theme) {
+    html.setAttribute('data-theme', theme);
+    toggle.innerHTML = theme === 'dark' ? '&#9788;' : '&#9789;';
+  }
+
+  var saved = localStorage.getItem('suite_theme');
+  if (saved) {
+    applyTheme(saved);
+  } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    applyTheme('dark');
+  }
+
+  toggle.addEventListener('click', function() {
+    var current = html.getAttribute('data-theme');
+    var next = current === 'dark' ? 'light' : 'dark';
+    localStorage.setItem('suite_theme', next);
+    applyTheme(next);
+  });
+})();
+</script>
+</body>
+</html>

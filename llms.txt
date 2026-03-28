@@ -43,5 +43,15 @@ Nanosecond, Microsecond, Millisecond, Second, Minute, Hour, Day, Week, Month (30
 ## Accuracy
 All conversion factors use internationally recognized definitions. Results display up to 10 significant digits with automatic scientific notation for extreme values. Temperature uses exact formulas (C×9/5+32, etc.).
 
+## Popular Conversion Pages
+- Kilograms to Pounds: https://freeunitconvert.app/kg-to-lbs.html
+- Celsius to Fahrenheit: https://freeunitconvert.app/celsius-to-fahrenheit.html
+- Miles to Kilometers: https://freeunitconvert.app/miles-to-km.html
+- Inches to Centimeters: https://freeunitconvert.app/inches-to-cm.html
+- Pounds to Kilograms: https://freeunitconvert.app/lbs-to-kg.html
+
 ## URL
 https://freeunitconvert.app/
+
+## Extended Documentation
+https://freeunitconvert.app/llms-full.txt
