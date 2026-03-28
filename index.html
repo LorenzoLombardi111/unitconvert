@@ -3,14 +3,103 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Unit Converter — freeunitconvert.app</title>
-<meta name="description" content="Free online unit converter. Convert length, weight, temperature, volume, area, speed, data, and time units instantly in your browser.">
-<meta property="og:title" content="Free Unit Converter — freeunitconvert.app">
-<meta property="og:description" content="Convert length, weight, temperature, volume, area, speed, data, and time units instantly.">
-<meta property="og:image" content="/og-image.svg">
+<title>Free Unit Converter — Length, Weight, Temperature Online | freeunitconvert.app</title>
+<meta name="description" content="Convert length, weight, temperature, volume, area, speed, data and time units free online. Instant results, no ads, works offline.">
+<link rel="canonical" href="https://freeunitconvert.app/">
+<meta property="og:title" content="Free Unit Converter — Length, Weight, Temperature Online | freeunitconvert.app">
+<meta property="og:description" content="Convert length, weight, temperature, volume, area, speed, data and time units free online. Instant results, no ads, works offline.">
+<meta property="og:image" content="https://freeunitconvert.app/og-image.svg">
+<meta property="og:url" content="https://freeunitconvert.app/">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://freeunitconvert.app">
+<meta property="og:site_name" content="freeunitconvert.app">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Unit Converter — Length, Weight, Temperature Online | freeunitconvert.app">
+<meta name="twitter:description" content="Convert length, weight, temperature, volume, area, speed, data and time units free online. Instant results, no ads, works offline.">
+<meta name="twitter:image" content="https://freeunitconvert.app/og-image.svg">
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "freeunitconvert.app",
+    "url": "https://freeunitconvert.app/",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "Free online unit converter for length, weight, temperature, volume, area, speed, data, and time. Instant results in your browser."
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is freeunitconvert.app free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, freeunitconvert.app is completely free to use with no sign-up, no ads, and no hidden costs. All conversions run instantly in your browser."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many unit categories are supported?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Eight categories are supported: Length, Weight, Temperature, Volume, Area, Speed, Data, and Time. Each category includes all commonly used units."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I convert temperature units?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. freeunitconvert.app converts between Celsius, Fahrenheit, and Kelvin using exact formulas — not simple multiplication — so results are always accurate."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does it handle very large or small numbers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The converter displays up to 10 significant digits and automatically switches to scientific notation for very large or very small values."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use it on mobile?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. The interface is fully responsive and works on any screen size. Category tabs scroll horizontally and dropdowns expand to full width on small screens."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does it save my preferences?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Your last-used category, selected units, and dark-mode preference are saved in your browser's local storage and restored automatically on your next visit."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://freeunitconvert.app/"
+      }
+    ]
+  }
+]
+</script>
 <link rel="manifest" href="/manifest.json">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -325,6 +414,74 @@ body {
 }
 .badge:hover { opacity: 1; }
 
+/* SEO content */
+.seo-content {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 64px 20px 40px;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text);
+  line-height: 1.7;
+}
+.seo-content h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: var(--text);
+  line-height: 1.3;
+}
+.seo-content h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 36px;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+.seo-content p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.seo-content .faq {
+  margin-top: 48px;
+}
+.seo-content .faq h2 {
+  margin-bottom: 20px;
+}
+.seo-content details {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 8px;
+  background: var(--surface);
+}
+.seo-content summary {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 14px 16px;
+  cursor: pointer;
+  color: var(--text);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.seo-content summary::-webkit-details-marker { display: none; }
+.seo-content summary::after { content: '+'; font-size: 18px; color: var(--text-muted); }
+.seo-content details[open] summary::after { content: '−'; }
+.seo-content details p {
+  padding: 0 16px 14px;
+  margin: 0;
+  font-size: 14px;
+}
+.seo-content .seo-footer {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
 /* Mobile */
 @media (max-width: 520px) {
   .convert-row {
@@ -387,6 +544,67 @@ body {
     </div>
   </div>
 </main>
+
+<div class="seo-content">
+  <h1>Free Unit Converter Online — Length, Weight, Temperature &amp; More</h1>
+
+  <h2>What units can freeunitconvert.app convert?</h2>
+  <p>freeunitconvert.app supports eight complete unit categories that cover everyday and professional conversion needs. Convert <strong>length</strong> units from kilometers to miles, meters to feet, or inches to centimeters. Switch between <strong>weight</strong> units like kilograms, pounds, ounces, and metric tons. Handle <strong>temperature</strong> conversions between Celsius, Fahrenheit, and Kelvin with precise formulas. Work with <strong>volume</strong> measurements including liters, gallons, cups, and tablespoons. Calculate <strong>area</strong> in square meters, acres, hectares, or square feet. Convert <strong>speed</strong> between m/s, km/h, mph, and knots. Translate <strong>digital data</strong> sizes from bytes to terabytes, including binary units like kibibytes and gibibytes. And convert <strong>time</strong> units from nanoseconds all the way up to years.</p>
+
+  <h2>How do I convert units for free online?</h2>
+  <p>Using freeunitconvert.app is simple and instant. Select a category tab at the top — Length, Weight, Temperature, Volume, Area, Speed, Data, or Time. Enter a number in the input field and choose your source unit from the first dropdown. Then select your target unit from the second dropdown. The result appears immediately as you type, with no button to press and no page reload. Use the swap button between the rows to quickly reverse the conversion direction. A formula line shows the conversion factor, and a reference table below displays ten common values for quick lookup. You can copy the result to your clipboard with one click. Everything runs client-side in JavaScript, so there is zero server latency and your data never leaves your device.</p>
+
+  <h2>How does temperature conversion work?</h2>
+  <p>Temperature conversion is unique because it cannot use simple multiplication like other unit categories. freeunitconvert.app uses the exact standard formulas for every temperature pair. To convert Celsius to Fahrenheit, the formula is F = C × 9/5 + 32. To go from Fahrenheit to Celsius, use C = (F − 32) × 5/9. Kelvin conversions add or subtract 273.15 from the Celsius value: K = C + 273.15 and C = K − 273.15. The converter handles these formulas internally so you simply type a number and read the result. Negative values, extreme temperatures, and decimal precision are all supported. Whether you need to convert body temperature, cooking temperatures, or scientific measurements, the results are accurate to ten significant digits.</p>
+
+  <h2>Why is freeunitconvert.app better than Google's unit converter?</h2>
+  <p>freeunitconvert.app is purpose-built for unit conversion with several advantages over a search-engine widget. The interface is dedicated and distraction-free — no ads, no search results, no cookie banners. All eight categories and their units are visible and accessible with a single click, whereas search converters require you to type a new query for each category. The reference table shows ten common conversions at a glance, saving time when you need multiple values. Results update instantly as you type with no network requests, because all processing runs in your browser. The app works fully offline after your first visit thanks to its service worker. It remembers your last-used category and units via local storage. Dark mode is built in. And it is completely free with no account required.</p>
+
+  <h2>Is freeunitconvert.app accurate?</h2>
+  <p>Yes. freeunitconvert.app uses IEEE 754 double-precision floating-point arithmetic, the same standard used by scientific calculators and engineering software. All conversion factors are sourced from internationally recognized definitions — for example, 1 inch is exactly 25.4 millimeters, 1 pound is exactly 0.45359237 kilograms, and 1 nautical mile is exactly 1,852 meters. Temperature conversions use the exact formulas defined by the International System of Units. Results display up to ten significant digits with no trailing zeros, and the converter automatically switches to scientific notation for very large or very small numbers. Intermediate calculations maintain full double-precision accuracy without rounding until the final display. For any standard unit conversion, freeunitconvert.app produces the same result as Wolfram Alpha or NIST reference tables.</p>
+
+  <h2>Does freeunitconvert.app work offline?</h2>
+  <p>Yes. freeunitconvert.app is a progressive web app with a service worker that caches all assets after your first visit. Once loaded, you can disconnect from the internet and continue converting units without any interruption. There are no server-side API calls — every conversion is computed locally in your browser using JavaScript. This also means the app works in airplane mode, in areas with poor connectivity, or on restricted networks. You can install it to your home screen on mobile devices or as a desktop app in Chrome and Edge. The offline cache updates automatically when a new version is deployed, so you always have the latest conversion factors. Your preferences, including dark mode and last-used units, are stored in local storage and persist across sessions regardless of connectivity.</p>
+
+  <div class="faq">
+    <h2>Frequently Asked Questions</h2>
+
+    <details>
+      <summary>Is freeunitconvert.app free?</summary>
+      <p>Yes, freeunitconvert.app is completely free to use with no sign-up, no ads, and no hidden costs. All conversions run instantly in your browser.</p>
+    </details>
+
+    <details>
+      <summary>How many unit categories are supported?</summary>
+      <p>Eight categories are supported: Length, Weight, Temperature, Volume, Area, Speed, Data, and Time. Each category includes all commonly used units.</p>
+    </details>
+
+    <details>
+      <summary>Can I convert temperature units?</summary>
+      <p>Yes. freeunitconvert.app converts between Celsius, Fahrenheit, and Kelvin using exact formulas — not simple multiplication — so results are always accurate.</p>
+    </details>
+
+    <details>
+      <summary>Does it handle very large or small numbers?</summary>
+      <p>Yes. The converter displays up to 10 significant digits and automatically switches to scientific notation for very large or very small values.</p>
+    </details>
+
+    <details>
+      <summary>Can I use it on mobile?</summary>
+      <p>Absolutely. The interface is fully responsive and works on any screen size. Category tabs scroll horizontally and dropdowns expand to full width on small screens.</p>
+    </details>
+
+    <details>
+      <summary>Does it save my preferences?</summary>
+      <p>Yes. Your last-used category, selected units, and dark-mode preference are saved in your browser's local storage and restored automatically on your next visit.</p>
+    </details>
+  </div>
+
+  <footer class="seo-footer">
+    <p>&copy; freeunitconvert.app</p>
+    <div class="more-tools-placeholder"></div>
+  </footer>
+</div>
 
 <div class="status-bar">All processing happens in your browser</div>
 <a href="https://freesuite.app" class="badge" target="_blank" rel="noopener">by freesuite.app</a>
